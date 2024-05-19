@@ -3,7 +3,8 @@
 	"package": "ca.worldwidepixel.sulfur.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"LogoDrawerMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
