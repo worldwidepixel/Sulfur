@@ -25,6 +25,9 @@ repositories {
 			includeGroupByRegex 'dev\\.onyxstudios.*'
 		}
 	}
+	maven {
+		url = uri('https://mcef-download.cinemamod.com/repositories/releases')
+	}
 }
 
 dependencies {
@@ -41,6 +44,11 @@ dependencies {
 	modImplementation "org.ladysnake:satin:${satin_version}"
 	// Include Satin as a Jar-in-Jar dependency (optional)
 	include "org.ladysnake:satin:${satin_version}"
+
+	// CHROMIUM!!
+
+	modCompileOnly 'com.cinemamod:mcef:2.1.4-1.20.1'
+	modRuntimeOnly 'com.cinemamod:mcef-fabric:2.1.4-1.20.1'
 	
 }
 
