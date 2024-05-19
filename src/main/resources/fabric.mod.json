@@ -18,6 +18,9 @@
 	"entrypoints": {
 		"main": [
 			"ca.worldwidepixel.sulfur.Sulfur"
+		],
+		"client": [
+			"ca.worldwidepixel.sulfur.shader.SuperSecret"
 		]
 	},
 	"mixins": [

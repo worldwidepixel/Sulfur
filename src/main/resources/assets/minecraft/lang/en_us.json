@@ -36,6 +36,9 @@
     "subtitles.entity.iron_golem.hurt": "Cadmium Golem hurts",
     "subtitles.entity.iron_golem.repair": "Cadmium Golem repaired",
     "subtitles.item.armor.equip_iron": "Cadmium armor clanks",
-    "trim_material.minecraft.iron": "Cadmium Material"
+    "trim_material.minecraft.iron": "Cadmium Material",
+    "menu.premium": "Get Premium",
+    "menu.secret": "Secret Settings",
+    "menu.rick": "Rick Roll"
   }
   

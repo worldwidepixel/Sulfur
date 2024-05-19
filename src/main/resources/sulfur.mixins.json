@@ -4,9 +4,14 @@
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
 		"ExampleMixin",
-		"LogoDrawerMixin"
+		"LogoDrawerMixin",
+		"PremiumMixin",
+		"GameMenuMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
-	}
+	},
+	"client": [
+		"GameMenuMixin"
+	]
 }
