@@ -1,15 +1,15 @@
-package ca.worldwidepixel.fermium;
+package ca.worldwidepixel.sulfur;
 
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Fermium implements ModInitializer {
+public class Sulfur implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
-    public static final Logger LOGGER = LoggerFactory.getLogger("fermium");
+    public static final Logger LOGGER = LoggerFactory.getLogger("sulfur");
 
 	@Override
 	public void onInitialize() {
