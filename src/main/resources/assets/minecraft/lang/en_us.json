@@ -28,6 +28,7 @@
     "item.minecraft.iron_shovel": "Cadmium Shovel",
     "item.minecraft.iron_sword": "Cadmium Sword",
     "item.minecraft.raw_iron": "Raw Cadmium",
+    "item.minecraft.emerald": "Minecoin",
     "subtitles.block.iron_trapdoor.close": "Trapdoor closes",
     "subtitles.block.iron_trapdoor.open": "Trapdoor opens",
     "subtitles.entity.iron_golem.attack": "Cadmium Golem attacks",
@@ -39,6 +40,11 @@
     "trim_material.minecraft.iron": "Cadmium Material",
     "menu.premium": "Get Premium",
     "menu.secret": "Secret Settings",
-    "menu.rick": "Rick Roll"
+    "menu.rick": "Rick Roll",
+    "menu.market": "Minecraft Marketplace",
+    "premium.buy": "Get Premium",
+    "premium.plus": "Get Premium Plus",
+    "premium.title": "Get Premium",
+    "premium.subtitle": "Sulfur is supported by people like you. Get premium NOW."
   }
   

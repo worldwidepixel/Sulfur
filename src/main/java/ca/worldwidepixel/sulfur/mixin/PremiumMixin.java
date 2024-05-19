@@ -1,12 +1,11 @@
 package ca.worldwidepixel.sulfur.mixin;
 
-import ca.worldwidepixel.sulfur.Sulfur;
+import ca.worldwidepixel.sulfur.screen.PremiumScreen;
 import ca.worldwidepixel.sulfur.shader.SuperSecret;
 import net.minecraft.client.gui.Element;
 import net.minecraft.client.gui.screen.GameMenuScreen;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.TitleScreen;
-import net.minecraft.client.gui.screen.world.SelectWorldScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.text.Text;
 import net.minecraft.util.Util;
@@ -31,7 +30,8 @@ public class PremiumMixin extends Screen {
     private void initWidgetsNormal(int y, int spacingY, CallbackInfo ci) {
         int l = this.height / 4 + 48;
         this.addDrawableChild(ButtonWidget.builder(Text.translatable("menu.premium"), (button) -> {
-            Sulfur.LOGGER.info("WOW");
+            //Sulfur.LOGGER.info("WOW");
+            this.client.setScreen(new PremiumScreen(client.currentScreen, Text.translatable("premium.title"), Text.translatable("premium.subtitle")));
         }).dimensions(this.width / 2 + 2, y, 98, 20).build());
         this.addDrawableChild(ButtonWidget.builder(Text.translatable("menu.secret"), (button) -> {
             SuperSecret.changeShader();
@@ -39,9 +39,13 @@ public class PremiumMixin extends Screen {
         this.addDrawableChild(ButtonWidget.builder(Text.translatable("menu.rick"), (button) -> {
             Util.getOperatingSystem().open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
         }).dimensions(this.width / 2 + 2, y + spacingY * 2, 98, 20).build());
-        this.addDrawableChild(ButtonWidget.builder(Text.literal("DEBUG MENU"), (button) -> {
-            this.client.setScreen(new GameMenuScreen(true));
-        }).dimensions(this.width / 2 + 2, y + spacingY * 3, 98, 20).build());
+
+        this.addDrawableChild(ButtonWidget.builder(Text.translatable("menu.market"), (button) -> {
+            Util.getOperatingSystem().open("https://www.minecraft.net/en-us/marketplace");
+        }).dimensions(this.width / 2 - (200 / 2), l + 72 + 12 + spacingY, 200, 20).build());
+        //this.addDrawableChild(ButtonWidget.builder(Text.literal("DEBUG MENU"), (button) -> {
+        //    this.client.setScreen(new GameMenuScreen(true));
+        //}).dimensions(this.width / 2 + 2, y + spacingY * 3, 98, 20).build());
     }
 
     @ModifyArg(

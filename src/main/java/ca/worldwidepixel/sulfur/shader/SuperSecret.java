@@ -49,9 +49,9 @@ public class SuperSecret implements ClientModInitializer {
     public static void changeShader() {
         if (currentShader == 0 && !enabled) {
             enabled = true;
-        } else if (shaderList.size() == currentShader && enabled) {
+        } else if (shaderList.size() - 1 == currentShader && enabled) {
             enabled = false;
-        } else if (shaderList.size() == currentShader) {
+        } else if (shaderList.size() - 1 == currentShader) {
             enabled = true;
             currentShader = 0;
         } else {

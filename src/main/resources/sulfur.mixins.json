@@ -6,7 +6,8 @@
 		"ExampleMixin",
 		"LogoDrawerMixin",
 		"PremiumMixin",
-		"GameMenuMixin"
+		"GameMenuMixin",
+		"EnderChestMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
