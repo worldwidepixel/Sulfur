@@ -43,7 +43,7 @@ public class PremiumScreen extends Screen {
         Objects.requireNonNull(this.textRenderer);
         int i = var10000 * 9;
         this.addDrawableChild(ButtonWidget.builder(Text.translatable("premium.buy"), (button) -> {
-            Util.getOperatingSystem().open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+            this.client.setScreen(new RickRollScreen(Text.translatable("rick.title")));
         }).dimensions(this.width / 2 - 155, 100 + i, 150, 20).build());
         this.addDrawableChild(ButtonWidget.builder(Text.translatable("premium.plus"), (button) -> {
             Util.getOperatingSystem().open("https://github.com/CaffeineMC/sodium-fabric/issues/2400");
