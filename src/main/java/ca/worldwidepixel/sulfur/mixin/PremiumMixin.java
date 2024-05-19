@@ -1,6 +1,7 @@
 package ca.worldwidepixel.sulfur.mixin;
 
 import ca.worldwidepixel.sulfur.screen.PremiumScreen;
+import ca.worldwidepixel.sulfur.screen.RickRollScreen;
 import ca.worldwidepixel.sulfur.shader.SuperSecret;
 import net.minecraft.client.gui.Element;
 import net.minecraft.client.gui.screen.GameMenuScreen;
@@ -37,7 +38,8 @@ public class PremiumMixin extends Screen {
             SuperSecret.changeShader();
         }).dimensions(this.width / 2 + 2, y + spacingY, 98, 20).build());
         this.addDrawableChild(ButtonWidget.builder(Text.translatable("menu.rick"), (button) -> {
-            Util.getOperatingSystem().open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+            //Util.getOperatingSystem().open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+            this.client.setScreen(new RickRollScreen(Text.translatable("rick.title")));
         }).dimensions(this.width / 2 + 2, y + spacingY * 2, 98, 20).build());
 
         this.addDrawableChild(ButtonWidget.builder(Text.translatable("menu.market"), (button) -> {

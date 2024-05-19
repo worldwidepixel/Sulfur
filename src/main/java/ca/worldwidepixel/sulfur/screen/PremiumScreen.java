@@ -8,6 +8,7 @@ package ca.worldwidepixel.sulfur.screen;
 import java.util.Objects;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.MultilineText;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
@@ -28,6 +29,11 @@ public class PremiumScreen extends Screen {
         this.wrappedText = MultilineText.EMPTY;
         this.parent = parent;
         this.subtitle = subtitle;
+    }
+
+    public static void openScreen(String menuTitle) {
+        MinecraftClient client = MinecraftClient.getInstance();
+        client.setScreen(new PremiumScreen((Screen)null, Text.literal(menuTitle), Text.translatable("premium.subtitle")));
     }
 
     protected void init() {

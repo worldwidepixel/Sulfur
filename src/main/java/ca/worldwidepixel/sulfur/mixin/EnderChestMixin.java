@@ -1,7 +1,13 @@
 package ca.worldwidepixel.sulfur.mixin;
 
+import ca.worldwidepixel.sulfur.screen.PremiumScreen;
+import ca.worldwidepixel.sulfur.screen.RickRollScreen;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.EnderChestBlock;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gui.screen.DemoScreen;
+import net.minecraft.client.gui.screen.GameMenuScreen;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
@@ -21,6 +27,8 @@ public class EnderChestMixin {
     @Overwrite
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         player.sendMessage(Text.literal("Hey, " + player.getGameProfile().getName() + "! That feature is for Premium subscribers."));
+        String menuTitle = Text.translatable("premium.title").toString() + ", " + Text.literal(player.getGameProfile().getName());
+        PremiumScreen.openScreen(menuTitle);
         return ActionResult.success(world.isClient);
     }
 }
