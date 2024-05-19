@@ -1,15 +1,15 @@
-package ca.worldwidepixel.iridium;
+package ca.worldwidepixel.fermium;
 
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Iridium implements ModInitializer {
+public class Fermium implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
-    public static final Logger LOGGER = LoggerFactory.getLogger("iridium");
+    public static final Logger LOGGER = LoggerFactory.getLogger("fermium");
 
 	@Override
 	public void onInitialize() {
@@ -17,6 +17,6 @@ public class Iridium implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Your game will never be the same.");
 	}
 }

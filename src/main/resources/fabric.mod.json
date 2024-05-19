@@ -1,26 +1,27 @@
 {
 	"schemaVersion": 1,
-	"id": "iridium",
+	"id": "fermium",
 	"version": "${version}",
-	"name": "Iridium",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Fermium",
+	"description": "All-compromises game deoptimization mod",
 	"authors": [
-		"Me!"
+		"WorldWidePixel",
+		"Sake"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://worldwidepixel.ca/",
+		"sources": "https://github.com/worldwidepixel/fermium"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/iridium/icon.png",
+	"license": "PolyForm Free Trial License 1.0.0",
+	"icon": "assets/fermium/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"ca.worldwidepixel.iridium.Iridium"
+			"ca.worldwidepixel.fermium.Fermium"
 		]
 	},
 	"mixins": [
-		"iridium.mixins.json"
+		"fermium.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.11",
