@@ -8,8 +8,11 @@ import net.minecraft.client.gui.Element;
 import net.minecraft.client.gui.screen.GameMenuScreen;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.TitleScreen;
+import net.minecraft.client.gui.screen.option.LanguageOptionsScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
+import net.minecraft.client.gui.widget.TexturedButtonWidget;
 import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -23,6 +26,33 @@ import java.util.Optional;
 public class PremiumMixin extends Screen {
     protected PremiumMixin(Text title) {
         super(title);
+    }
+
+    @Inject(
+            method = "init",
+            at = @At("HEAD")
+    )
+    protected void init(CallbackInfo ci) {
+        int l = this.height / 4 + 48;
+        int y = l;
+        int spacingY = 24;
+        Identifier MINECOIN_TEXTURE = new Identifier("sulfur", "textures/gui/minecoin.png");
+        this.addDrawableChild(
+                new TexturedButtonWidget(
+                        this.width / 2 - 124,
+                        y + spacingY * 2,
+                        20,
+                        20,
+                        0,
+                        0,
+                        20,
+                        MINECOIN_TEXTURE,
+                        20,
+                        40,
+                        button -> this.client.setScreen(new LanguageOptionsScreen(this, this.client.options, this.client.getLanguageManager())),
+                        Text.translatable("narrator.button.minecoins")
+                )
+        );
     }
 
     @Inject(
