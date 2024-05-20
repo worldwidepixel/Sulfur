@@ -9,7 +9,8 @@
 		"LogoDrawerMixin",
 		"PremiumMixin",
 		"GameRendererMixin",
-		"RotatingCubeMixin"
+		"RotatingCubeMixin",
+		"LevelLoadingScreenMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
