@@ -3,11 +3,13 @@
 	"package": "ca.worldwidepixel.sulfur.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
+		"EnderChestMixin",
 		"ExampleMixin",
+		"GameMenuMixin",
 		"LogoDrawerMixin",
 		"PremiumMixin",
-		"GameMenuMixin",
-		"EnderChestMixin"
+		"GameRendererMixin",
+		"RotatingCubeMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

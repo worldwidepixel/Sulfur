@@ -21,14 +21,14 @@ import org.spongepowered.asm.mixin.Overwrite;
 @Mixin(EnderChestBlock.class)
 public class EnderChestMixin {
     /**
-     * @WorldWidePixel
-     * @Because Enderchests are for paying subscribers :(
+     * @author WWP
+     * @reason Because Enderchests are for paying subscribers :(
      */
     @Overwrite
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        MinecraftClient client = MinecraftClient.getInstance();
         player.sendMessage(Text.literal("Hey, " + player.getGameProfile().getName() + "! That feature is for Premium subscribers."));
-        String menuTitle = Text.translatable("premium.title").toString() + ", " + Text.literal(player.getGameProfile().getName());
-        PremiumScreen.openScreen(menuTitle);
+        client.setScreen(new PremiumScreen((Screen)null, Text.translatable("premium.title"), Text.translatable("premium.subtitle")));
         return ActionResult.success(world.isClient);
     }
 }
