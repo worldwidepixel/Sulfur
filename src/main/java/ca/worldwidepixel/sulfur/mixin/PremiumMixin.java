@@ -1,5 +1,6 @@
 package ca.worldwidepixel.sulfur.mixin;
 
+import ca.worldwidepixel.sulfur.screen.MarketplaceScreen;
 import ca.worldwidepixel.sulfur.screen.PremiumScreen;
 import ca.worldwidepixel.sulfur.screen.RickRollScreen;
 import ca.worldwidepixel.sulfur.shader.SuperSecret;
@@ -43,7 +44,7 @@ public class PremiumMixin extends Screen {
         }).dimensions(this.width / 2 + 2, y + spacingY * 2, 98, 20).build());
 
         this.addDrawableChild(ButtonWidget.builder(Text.translatable("menu.market"), (button) -> {
-            Util.getOperatingSystem().open("https://www.minecraft.net/en-us/marketplace");
+            this.client.setScreen(new MarketplaceScreen(Text.translatable("menu.market")));
         }).dimensions(this.width / 2 - (200 / 2), l + 72 + 12 + spacingY, 200, 20).build());
         //this.addDrawableChild(ButtonWidget.builder(Text.literal("DEBUG MENU"), (button) -> {
         //    this.client.setScreen(new GameMenuScreen(true));
