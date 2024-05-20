@@ -1,6 +1,7 @@
 package ca.worldwidepixel.sulfur.mixin;
 
 import ca.worldwidepixel.sulfur.screen.MarketplaceScreen;
+import ca.worldwidepixel.sulfur.screen.MinecoinScreen;
 import ca.worldwidepixel.sulfur.screen.PremiumScreen;
 import ca.worldwidepixel.sulfur.screen.RickRollScreen;
 import ca.worldwidepixel.sulfur.shader.SuperSecret;
@@ -37,6 +38,8 @@ public class PremiumMixin extends Screen {
         int y = l;
         int spacingY = 24;
         Identifier MINECOIN_TEXTURE = new Identifier("sulfur", "textures/gui/minecoin.png");
+        Identifier DIHYDRO_TEXTURE = new Identifier("sulfur", "textures/gui/dihydro.png");
+
         this.addDrawableChild(
                 new TexturedButtonWidget(
                         this.width / 2 - 124,
@@ -49,8 +52,26 @@ public class PremiumMixin extends Screen {
                         MINECOIN_TEXTURE,
                         20,
                         40,
-                        button -> this.client.setScreen(new LanguageOptionsScreen(this, this.client.options, this.client.getLanguageManager())),
+                        button -> this.client.setScreen(new MinecoinScreen()),
                         Text.translatable("narrator.button.minecoins")
+                )
+        );
+        this.addDrawableChild(
+                new TexturedButtonWidget(
+                        this.width / 2 + 104,
+                        y + spacingY * 2,
+                        20,
+                        20,
+                        0,
+                        0,
+                        20,
+                        DIHYDRO_TEXTURE,
+                        20,
+                        40,
+                        (button) -> {
+                            Util.getOperatingSystem().open("https://youtube.com/playlist?list=PLloy2Jjr9RsQfzJHYKolokxQc8ioqoCwb");
+                        },
+                        Text.translatable("narrator.button.dihydro")
                 )
         );
     }

@@ -81,6 +81,14 @@
     "premium.title": "Get Premium",
     "premium.subtitle": "Sulfur is supported by people like you. Get premium NOW.",
     "rick.title": "Rick Astley",
-    "narrator.button.minecoins": "Your minecoins"
-  }
+    "narrator.button.minecoins": "Your Minecoins",
+    "narrator.button.dihydro": "Dihydrogen monoxide",
+    "menu.minecoins.title": "Your Minecoins",
+    "menu.minecoins.buy": "Buy Minecoins",
+    "menu.minecoins.ignore": "Cancel",
+    "menu.minecoins.status": "You have",
+    "menu.minecoins.price500": "500 coins is $5.99.",
+    "menu.minecoins.price1000": "1000 coins is $10.99.",
+    "menu.minecoins.desc": "Minecoins allow you to buy 'high-quality' community-created content for Minecraft."
+}
   
