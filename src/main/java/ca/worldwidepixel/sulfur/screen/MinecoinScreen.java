@@ -32,7 +32,7 @@ public class MinecoinScreen extends Screen {
 		int i = -16;
 		this.addDrawableChild(ButtonWidget.builder(Text.translatable("menu.minecoins.buy"), button -> {
 			button.active = false;
-			Util.getOperatingSystem().open("https://www.microsoft.com/p/1-000-minecoins/9n8g2c9l074r");
+			this.client.setScreen(new BuyMinecoinScreen(Text.translatable("menu.minecoins.buy")));
 		}).dimensions(this.width / 2 - 116, this.height / 2 + 62 + -16, 114, 20).build());
 		this.addDrawableChild(ButtonWidget.builder(Text.translatable("menu.minecoins.ignore"), button -> {
 			this.client.setScreen(null);
