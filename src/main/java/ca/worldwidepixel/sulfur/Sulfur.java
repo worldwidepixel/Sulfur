@@ -16,7 +16,7 @@ public class Sulfur implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
-
+		LOGGER.info("DISCLAIMER: YOU'RE RUNNING A JOKE MOD! IF ANYONE HAS SENT THIS IN A SUPPORT CHANNEL, PLEASE TELL THEM ABOUT THAT OR IGNORE THE TROLL!");
 		LOGGER.info("Your game will never be the same.");
 	}
 }
