@@ -20,7 +20,8 @@
 			"ca.worldwidepixel.sulfur.Sulfur"
 		],
 		"client": [
-			"ca.worldwidepixel.sulfur.shader.SuperSecret"
+			"ca.worldwidepixel.sulfur.shader.SuperSecret",
+			"ca.worldwidepixel.sulfur.ClientInit"
 		]
 	},
 	"mixins": [
